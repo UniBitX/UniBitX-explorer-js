@@ -1,4 +1,4 @@
-# UniBitX-Blockchain-Explorer
+# UniBitX Blockchain Explorer
 Block explorer for UniBitX CryptoNote based cryptocurrency.
 
 #### Installation
