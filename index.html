@@ -27,12 +27,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand " href="#"><img src="img/unibitx.png"> <strong>UniBit</strong>X</a>
+            <a class="navbar-brand " href="https://unibitx.app"><img src="img/unibitx.png">UniBit<strong>X</strong></a>
 			<div id="stats_updated"><i class="fa fa-bolt"></i></div>
         </div>
-		
+
         <div class="collapse navbar-collapse">
-		 
+
             <ul class="nav navbar-nav navbar-left explorer_menu">
 
 			    <li><a class="hot_link" data-page="home.html" href="#">
@@ -43,11 +43,11 @@
 		<li><a class="hot_link" data-page="check_txn.html" href="#check_txn">
                     <i class="fa fa-exchange" aria-hidden="true"></i> Check TXNs
                 </a></li>
-				
+
 		<li><a class="hot_link" data-page="pools.html" href="#pools">
                     <i class="fa fa-gavel" aria-hidden="true"></i> Pools
                 </a></li>
-				
+
 		<li><a class="hot_link" data-page="api.html" href="#api">
                     <i class="fa fa-code" aria-hidden="true"></i> API
                 </a></li>
@@ -57,18 +57,18 @@
 
                 <li style="display:none;"><a class="hot_link" data-page="blockchain_transaction.html" href="#blockchain_transaction"><i class="fa fa-cubes"></i> Transaction
                 </a></li>
-				
+
 				<li style="display:none;"><a class="hot_link" data-page="blockchain_payment_id.html" href="#blockchain_payment_id"><i class="fa fa-cubes"></i> Transactions by Payment ID
                 </a></li>
 
                 <li><a  style="display:none;" class="hot_link" data-page="support.html" href="#support">
                     <i class="fa fa-comments"></i> Help
-                </a></li> 
+                </a></li>
 
 <!-- //-->
             </ul>
-            
-					
+
+
 			<div class="nav col-md-6 navbar-right explorer-search">
 				<div class="input-group">
 					<input class="form-control" placeholder="Search by block height / hash, transaction hash, payment id" id="txt_search">
@@ -77,14 +77,14 @@
 					</button></span>
 				</div>
 			</div>
-		  
-		  
-		  
+
+
+
 		</div>
 	  </div>
 </div>
 
-	
+
 <script>
 $('#btn_search').click(function(e) {
 
@@ -94,7 +94,7 @@ function GetSearchBlockbyHeight(){
 
 	var block, xhrGetSearchBlockbyHeight;
     if (xhrGetSearchBlockbyHeight) xhrGetSearchBlockbyHeight.abort();
-	  
+
 			xhrGetSearchBlockbyHeight = $.ajax({
             url: api + '/json_rpc',
             method: "POST",
@@ -180,21 +180,21 @@ var block, xhrGetSearchBlock;
 										} else if(data.error) {
 											$('#page').after(
 												'<div class="alert alert-warning alert-dismissable fade in" style="position: fixed; right: 50px; top: 50px;">'+
-													'<button type="button" class="close" ' + 
-															'data-dismiss="alert" aria-hidden="true">' + 
-														'&times;' + 
-													'</button>' + 
-													'We could not find anything.' + 
+													'<button type="button" class="close" ' +
+															'data-dismiss="alert" aria-hidden="true">' +
+														'&times;' +
+													'</button>' +
+													'We could not find anything.' +
 												 '</div>');
 										}
 									}
 								});
-							  
+
 							  }
 						}
 					});
 				}
-			}	
+			}
 		});
 }
 
@@ -213,11 +213,11 @@ e.preventDefault();
 function wrongSearchAlert() {
 	$('#page').after(
 		'<div class="alert alert-danger alert-dismissable fade in" style="position: fixed; right: 50px; top: 50px;">'+
-		'<button type="button" class="close" ' + 
-		'data-dismiss="alert" aria-hidden="true">' + 
-		'&times;' + 
-		'</button>' + 
-		'<strong>Wrong search query!</strong><br /> Please enter block height or hash, transaction hash, or payment id.' + 
+		'<button type="button" class="close" ' +
+		'data-dismiss="alert" aria-hidden="true">' +
+		'&times;' +
+		'</button>' +
+		'<strong>Wrong search query!</strong><br /> Please enter block height or hash, transaction hash, or payment id.' +
 		'</div>');
 }
 
@@ -248,26 +248,25 @@ $('#txt_search').keyup(function(e){
 		<div class="row">
 			<div class="col-lg-4 col-md-3 col-sm-3 text-center">
 				<p>
-					<small>
-						&copy; 2019 <strong>UniBitX</strong> 
-					</small>
+        <small>	&copy; 2020 <a href="https://unibitx.org/"><strong>UniBitX</strong></a>. Open Source. Decentralized.</small>
+
 				</p>
 			</div>
 			<div class="col-lg-4 col-md-3 col-sm-6 text-center">
 				<p>
 					<small>
 					<!-- This copyright should be left intact -->
-				
-					Powered by <a target="_blank" href="https://github.com/UniBitX/UniBitX-explorer-js"><i class="fa fa-github"></i> UniBitX Blockchain Explorer</a> v. 1.0.0.<br />
-					<span class="text-muted">Code from <strong>Karbowanec Blockchain Explorer & Turtlecoin</strong><br />
-					<span class="text-muted">Partially based on <strong>cryptonote-universal-pool</strong><br />
-					open sourced under the <a href="http://www.gnu.org/licenses/gpl-2.0.html">GPL</a></span>
+
+					Powered by <a target="_blank" href="https://github.com/UniBitX/UniBitX-explorer-js"><i class="fa fa-github"></i> UniBitX Blockchain Explorer</a><br>
+					<span class="text-muted">Code from <strong>Karbowanec Blockchain Explorer & Turtlecoin</strong><br>
+					<span class="text-muted">Partially based on <strong>cryptonote-universal-pool</strong><br>
+					Open Sourced under the <a href="http://www.gnu.org/licenses/gpl-2.0.html">GPL</a></span>
 					</small>
 				</p>
 			</div>
 			<div class="col-lg-4 col-md-3 col-sm-3 text-center">
                                 <ul class="list-unstyled">
-				        <li><a href="https://unibit.app/">UNIBIT.APP</a></li>
+				        <li><a href="https://unibitx.app/"><small>UniBitX.app</small></a></li>
                                </ul>
 			</div>
 		</div>
@@ -282,21 +281,21 @@ $('#txt_search').keyup(function(e){
 					} else {
 						$('.scrollup').fadeOut();
 					}
-				}); 
-		
+				});
+
 				$('.scrollup').click(function(){
 					$("html, body").animate({ scrollTop: 0 }, 600);
 					return false;
 				});
 
 				$('.scrollup').css('opacity','0.3');
-		 
+
 				$('.scrollup').hover(function(){
 					$(this).stop().animate({opacity: 0.9}, 400);
 				 }, function(){
 					$(this).stop().animate({opacity: 0.3}, 400);
-				});  
-					
+				});
+
 			});});
 	</script>
 </body>
